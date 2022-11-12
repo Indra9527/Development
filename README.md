@@ -1,7 +1,7 @@
 # Development
 
 ### Link to Deployed Website
-[https://Indra9527.github.io/Development](link)
+https://Indra9527.github.io/Development
 
 ### Goal and Value of the Application
 The application is the home page of a mini store that offers many different kinds of items for users to choose from. For each item, users can choose to add it to their shopping cart and see the total price, or they can choose to add it to their favorite list for reference. In addition, it also provides filters and sorters for products so that users can easily find the products they want and like.
