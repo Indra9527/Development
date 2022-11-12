@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
+import productData from "./assets/products.json";
+import ProductItem from './components/ProductItem';
+import Cart from './components/Cart';
+import FilterGroup from './components/FilterGroup';
 
 function App() {
+
+  const [amount, setAmount] = useState(0);
+  const [entry, setEntry] = useState({});
+  const [like, setLike] = useState([]);
+  const [items, setItems] = useState(productData);
+  const [filter, setFilter] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={{minWidth: "100%", right: "0"}}><h1 style={{ color: "#434343", fontSize: "70pt", backgroundColor: "#ff7a45", padding: "1rem", }}>My Mini Store</h1></div>
+      <div className="App">
+
+        <FilterGroup data={productData} item={items} filter={filter} setFilter={setFilter} like={like} entry={entry} setItems={setItems}></FilterGroup>
+        <div style={{ display: "flex" }}>
+          <div className='itemPlace'>
+            {items.map((item, index) => (
+              <ProductItem item={item} amount={amount} setAmount={setAmount} entry={entry} setEntry={setEntry} like={like} setLike={setLike}></ProductItem>
+            ))}
+          </div>
+
+          <div><Cart amount={amount} setAmount={setAmount} entry={entry} setEntry={setEntry}></Cart></div>
+        </div>
+      </div>
+    </>
   );
 }
 
