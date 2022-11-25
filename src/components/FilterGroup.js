@@ -144,9 +144,9 @@ export default function FilterGroup(props) {
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <span style={{ fontSize: "15pt", color: "#237804", marginRight: "20px" }}>Sort:</span>
-                            <Radio.Group defaultValue="" buttonStyle="solid" onChange={sortChange}>
+                            <Radio.Group defaultValue="b" buttonStyle="solid" onChange={sortChange}>
                                 <Radio.Button value="a">Popular low to high</Radio.Button>
-                                <Radio.Button value="b">Popular Hight to Low</Radio.Button>
+                                <Radio.Button value="b">Popular High to Low</Radio.Button>
                                 <Radio.Button value="c">Price low to high</Radio.Button>
                                 <Radio.Button value="d">Price High to high</Radio.Button>
                             </Radio.Group>

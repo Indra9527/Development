@@ -10,12 +10,14 @@ function App() {
   const [amount, setAmount] = useState(0);
   const [entry, setEntry] = useState({});
   const [like, setLike] = useState([]);
-  const [items, setItems] = useState(productData);
+  const [items, setItems] = useState(productData.sort((a, b) => {
+    return (b.rating - a.rating);
+  }));
   const [filter, setFilter] = useState({});
 
   return (
     <>
-      <div style={{minWidth: "100%", right: "0"}}><h1 style={{ color: "#434343", fontSize: "70pt", backgroundColor: "#ff7a45", padding: "1rem", }}>My Mini Store</h1></div>
+      <div style={{ minWidth: "100%", right: "0" }}><h1 style={{ color: "#434343", fontSize: "70pt", backgroundColor: "#ff7a45", padding: "1rem", }}>My Mini Store</h1></div>
       <div className="App">
 
         <FilterGroup data={productData} item={items} filter={filter} setFilter={setFilter} like={like} entry={entry} setItems={setItems}></FilterGroup>
