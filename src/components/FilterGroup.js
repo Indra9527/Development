@@ -137,9 +137,9 @@ export default function FilterGroup(props) {
                             />
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <span style={{ fontSize: "15pt", color: "#237804", marginRight: "20px" }}>Only In Cart:</span>
+                            <span style={{ fontSize: "15pt", color: "#237804", marginRight: "20px" }}>In Cart:</span>
                             <Switch style={{ display: "inline", }} checkedChildren="Open" unCheckedChildren="Close" onChange={changeCart} />
-                            <span style={{ fontSize: "15pt", color: "#237804", marginRight: "20px", marginLeft: "60px" }}>Only Favourite:</span>
+                            <span style={{ fontSize: "15pt", color: "#237804", marginRight: "20px", marginLeft: "60px" }}>Your Favourite:</span>
                             <Switch style={{ display: "inline", }} checkedChildren="Open" unCheckedChildren="Close" onChange={changeFavour} />
                         </ListGroup.Item>
                         <ListGroup.Item>
@@ -148,7 +148,7 @@ export default function FilterGroup(props) {
                                 <Radio.Button value="a">Popular low to high</Radio.Button>
                                 <Radio.Button value="b">Popular High to Low</Radio.Button>
                                 <Radio.Button value="c">Price low to high</Radio.Button>
-                                <Radio.Button value="d">Price High to high</Radio.Button>
+                                <Radio.Button value="d">Price high to low</Radio.Button>
                             </Radio.Group>
                         </ListGroup.Item>
                     </ListGroup>
